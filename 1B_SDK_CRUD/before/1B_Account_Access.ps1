@@ -17,7 +17,7 @@ if (-not $RESOURCE_GROUP) {
 # ---- Sign in (if not already) ----
 az account show -o none 2>$null
 if ($LASTEXITCODE -ne 0) {
-  az login --allow-no-subscriptions | Out-Null
+  az login | Out-Null
 }
 
 $USER_ID         = (az ad signed-in-user show --query id -o tsv).Trim()

@@ -14,7 +14,7 @@ Windows VM in a browser.
 |---------|------------|------------------|
 | Student | [Student workshop guide](docs/StudentEnvironmentSetup.md) | Connect to your VM, configure access, choose C# or Python, and complete the labs in order |
 | Trainer | [Trainer delivery guide](docs/TrainerGuide.md) | Prepare the session, guide the course narrative, deliver each module, and support students |
-| Environment administrator | [Trainer environment setup](docs/TrainerEnvironmentSetup.md) | Provision the cohort, validate resources, distribute credentials, control costs, and clean up |
+| Environment administrator | [Trainer environment setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md) | Provision the cohort, validate resources, distribute credentials, control costs, and clean up |
 
 ## What the workshop covers
 
@@ -29,14 +29,16 @@ The content follows the sequence in the workshop content outline:
 
 ## Student journey
 
-1. Receive one credential row from your trainer. The portal and VM passwords
-	are the same.
-2. Open the Bastion link and sign in to the workshop VM.
-3. Run `az login`, configure environment variables, and apply the lab data-plane
-	role assignments.
-4. Choose C# or Python and work from each lab's `before` folder.
-5. Complete the labs in the documented order, using `after` only as a reference.
-6. Tell the trainer when you finish so the VM can be deallocated.
+1. Sign in to the [NoSQL Workshop Registrations portal](https://nosqlreg.azurewebsites.net) as a registrant.
+2. Open your registered event, then select **VM Link** in **VM Details**. Sign in
+  to the workshop VM with the VM User Name and VM Password shown there.
+3. Use the Azure Portal user credentials supplied by your trainer at the
+  [Azure portal](https://portal.azure.com) to access Azure resources if required.
+4. Run `az login`, configure environment variables, and apply the lab data-plane
+  role assignments.
+5. Choose C# or Python and work from each lab's `before` folder.
+6. Complete the labs in the documented order, using `after` only as a reference.
+7. Tell the trainer when you finish so the VM can be deallocated.
 
 See the [student workshop guide](docs/StudentEnvironmentSetup.md) for commands,
 lab links, checkpoints, and troubleshooting.
@@ -53,7 +55,7 @@ lab links, checkpoints, and troubleshooting.
 	longer required.
 
 Use the [trainer delivery guide](docs/TrainerGuide.md) for the teaching flow and
-the [trainer environment setup](docs/TrainerEnvironmentSetup.md) for Azure
+the [trainer environment setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md) for Azure
 operations.
 
 ## Lab order
@@ -93,5 +95,5 @@ cells. Lab 4B runs in Microsoft Fabric and therefore has no local code project.
 
 * [Student workshop guide](docs/StudentEnvironmentSetup.md)
 * [Trainer delivery guide](docs/TrainerGuide.md)
-* [Trainer environment setup](docs/TrainerEnvironmentSetup.md)
+* [Trainer environment setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md)
 * [Lab VM setup reference](docs/LabVmSetup.md)

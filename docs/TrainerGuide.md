@@ -2,7 +2,7 @@
 
 Use this guide to deliver the workshop after the Azure cohort has been
 provisioned. Azure deployment, roster generation, cost controls, and cleanup are
-covered in [Trainer Environment Setup](TrainerEnvironmentSetup.md).
+covered in [Trainer Environment Setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md).
 
 ## Trainer workflow
 
@@ -16,7 +16,7 @@ covered in [Trainer Environment Setup](TrainerEnvironmentSetup.md).
 
 ### Step 2: Provision the cohort
 
-1. Complete [Trainer Environment Setup](TrainerEnvironmentSetup.md) at least 24
+1. Complete [Trainer Environment Setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md) at least 24
   hours before class.
 2. Use shared Fabric for a cohort that includes Lab 4B. Do not deploy one Fabric
   capacity per student.
@@ -27,10 +27,10 @@ covered in [Trainer Environment Setup](TrainerEnvironmentSetup.md).
 
 1. Use one roster row exactly as a student would.
 2. Open its Bastion link and sign in to the VM.
-3. Run `az login --use-device-code`, `SetEnv.ps1`, and
+3. Run `az login`, `SetEnv.ps1`, and
   `1B_Account_Access.ps1`.
 4. Run the smoke test documented in
-  [Trainer Environment Setup](TrainerEnvironmentSetup.md#smoke-testing-one-student-environment).
+  [Trainer Environment Setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md#smoke-testing-one-student-environment).
 5. Validate Fabric separately when Lab 4B is included.
 6. Deallocate the validation VM until class begins.
 
@@ -87,7 +87,7 @@ prerequisites, and common questions.
 3. Pause the shared Fabric capacity.
 4. Retain or delete the cohort according to the workshop retention policy.
 5. Follow the cleanup and cost guidance in
-  [Trainer Environment Setup](TrainerEnvironmentSetup.md#cleanup).
+  [Trainer Environment Setup](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md#cleanup).
 
 ---
 
@@ -108,7 +108,7 @@ The course is designed as a single day. If running short on time, the safest lab
 
 ## Pre-workshop preparation
 
-Provision the cohort at least 24 hours before class using [TrainerEnvironmentSetup.md](TrainerEnvironmentSetup.md), then run the single-student smoke-test from that same doc end-to-end to identify any environment issues in advance.
+Provision the cohort at least 24 hours before class using [TrainerEnvironmentSetup.md](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md), then run the single-student smoke-test from that same doc end-to-end to identify any environment issues in advance.
 
 ---
 
@@ -376,7 +376,7 @@ These come up regardless of section.
 
 ## References
 
-- [TrainerEnvironmentSetup.md](TrainerEnvironmentSetup.md) — pre-class environment provisioning (Bicep, scripts, roster CSV, smoke-test, cost & cleanup)
+- [TrainerEnvironmentSetup.md](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/docs/TrainerEnvironmentSetup.md) — pre-class environment provisioning (Bicep, scripts, roster CSV, smoke-test, cost & cleanup)
 - [StudentEnvironmentSetup.md](StudentEnvironmentSetup.md) — student-facing first-15-minutes walkthrough
 - Azure Cosmos DB Capacity Calculator — <https://cosmos.azure.com/capacitycalculator/>
 - Fabric portal — <https://app.fabric.microsoft.com/>

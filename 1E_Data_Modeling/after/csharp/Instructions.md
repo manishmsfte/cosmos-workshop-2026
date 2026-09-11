@@ -17,8 +17,8 @@ This lab uses two Cosmos accounts:
 
 | Steps  | Account                                                 | Endpoint env var               | Why                                                                                                       |
 |--------|---------------------------------------------------------|--------------------------------|-----------------------------------------------------------------------------------------------------------|
-| 0–4    | Serverless (`bicep/modules/cosmosdb.bicep`)             | `COSMOS_ENDPOINT`              | Two new databases (`ModelingReference`, `ModelingEmbed`) hold the reference vs embed datasets.            |
-| 5–7    | Provisioned (`bicep/modules/cosmosdb.provisioned.bicep`) | `COSMOS_ENDPOINT_PROVISIONED`  | Azure Monitor exposes per-partition RU consumption only for provisioned containers — needed for Step 7.   |
+| 0–4    | [Serverless](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/bicep/modules/cosmosdb.bicep)             | `COSMOS_ENDPOINT`              | Two new databases (`ModelingReference`, `ModelingEmbed`) hold the reference vs embed datasets.            |
+| 5–7    | [Provisioned](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/bicep/modules/cosmosdb.provisioned.bicep) | `COSMOS_ENDPOINT_PROVISIONED`  | Azure Monitor exposes per-partition RU consumption only for provisioned containers — needed for Step 7.   |
 
 The new modeling databases on the serverless account are deployed in advance:
 

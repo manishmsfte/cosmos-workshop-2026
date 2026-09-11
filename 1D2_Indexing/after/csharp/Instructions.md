@@ -12,7 +12,7 @@ The lab uses a single project in the `1D2_Indexing` directory. Running `dotnet r
 - .NET 10 SDK
 - `COSMOS_ENDPOINT` environment variable set to your Cosmos DB account endpoint
 
-The `ItemsDefaultIndex` and `ItemsCustomIndex` containers in the `WorkshopData` database are deployed in advance by the workshop Bicep template (`bicep/modules/cosmosdb.bicep`). Cosmos DB AAD tokens only authorize data-plane operations, so the lab inspects existing containers rather than creating them.
+The `ItemsDefaultIndex` and `ItemsCustomIndex` containers in the `WorkshopData` database are deployed in advance by the [workshop Bicep template](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/bicep/modules/cosmosdb.bicep). Cosmos DB AAD tokens only authorize data-plane operations, so the lab inspects existing containers rather than creating them.
 
 `ItemsCustomIndex` is deployed with this policy:
 

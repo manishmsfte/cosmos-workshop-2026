@@ -11,7 +11,7 @@ imageReference: {
 }
 ```
 
-The VM deployment runs [`script/Initialize-LabVm.ps1`](../script/Initialize-LabVm.ps1) using a bootstrap local administrator. Students sign in through Microsoft Entra ID; the bootstrap account is not distributed. The script is safe to rerun if setup fails.
+The VM deployment runs [`Initialize-LabVm.ps1`](https://github.com/manishmsfte/cosmos-workshop-deployment/blob/main/script/Initialize-LabVm.ps1) from the deployment repository using a bootstrap local administrator. Students sign in through Microsoft Entra ID; the bootstrap account is not distributed. The script is safe to rerun if setup fails.
 
 - Click through privacy-preferences dialogs on first login.
 - Install PowerShell 7, Azure CLI, and Git. _(script)_
@@ -29,8 +29,7 @@ The VM deployment runs [`script/Initialize-LabVm.ps1`](../script/Initialize-LabV
   - Install extensions: **Jupyter**, **C#**, **Python**. _(script)_
 - Clone the workshop repository to `Documents\cosmos-workshop-2026`. _(script)_
 - Use PowerShell 7 for the workshop. Git Bash is not required.
-- Sign in to Windows from the Bastion session with the student's Entra UPN and
-  then use `az login --use-device-code` so the
-  authentication window cannot be hidden behind VS Code.
+- Sign in to Windows from the Bastion session with the student's Entra UPN,
+  then use `az login` to authenticate the Azure CLI.
 - WSL update popup: press **Enter** to install. (Cancel just re-opens the popup later)
   - WSL itself is not used by any lab but update keeps it from popping back up.

@@ -936,7 +936,7 @@ def generate_response(question: str) -> str:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": question}
         ],
-        max_completion_tokens=500
+        max_completion_tokens=1000
     )
     return completion.choices[0].message.content
 
@@ -1014,7 +1014,7 @@ def generate_response(question: str) -> str:
             {"role": "system", "content": f"You are a helpful assistant. Answer based on: {context}"},
             {"role": "user", "content": question}
         ],
-        max_completion_tokens=500
+        max_completion_tokens=1000
     )
     return completion.choices[0].message.content
 
@@ -1236,7 +1236,7 @@ def chat_agent(sid: str, user_message: str) -> str:
             {"role": "system", "content": system_content},
             {"role": "user", "content": user_message}
         ],
-        max_completion_tokens=500
+        max_completion_tokens=1000
     )
     latency_ms = int((time.perf_counter() - start) * 1000)
 

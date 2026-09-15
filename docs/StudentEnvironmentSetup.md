@@ -55,7 +55,7 @@ browser, so you do not need a local RDP client.
 Run:
 
 ```powershell
-az login
+az login 
 ```
 
 Complete the Azure CLI sign-in prompts using `UserPrincipalName` and the same

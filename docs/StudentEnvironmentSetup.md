@@ -55,11 +55,14 @@ browser, so you do not need a local RDP client.
 Run:
 
 ```powershell
-az login 
+az login
 ```
 
-Complete the Azure CLI sign-in prompts using `UserPrincipalName` and the same
-shared password used for the VM.
+The terminal prints a short code. In the visible browser window, open
+<https://microsoft.com/devicelogin>, enter the code, then use
+`UserPrincipalName` and the same shared password used for the VM. This avoids an
+Azure CLI login popup being hidden behind VS Code. Complete any tenant-required
+authentication prompts.
 
 Confirm that the expected subscription is selected:
 
@@ -166,12 +169,12 @@ to compare your result or recover when the trainer directs you to do so.
 
 | Symptom | Most likely cause | Fix |
 |---------|-------------------|-----|
-| `No active Azure CLI session` | Azure CLI is not signed in | Run `az login`, then complete the sign-in prompts |
+| `No active Azure CLI session` | Azure CLI is not signed in | Run `az login --use-device-code`, then complete sign-in at <https://microsoft.com/devicelogin> |
 | No workshop resource group is found | The wrong subscription is selected | Run `az account show`, then ask the trainer for the correct subscription if needed |
 | Multiple workshop resource groups are shown | The signed-in identity can access more than one environment | Select the resource group matching the student number in your roster |
 | An environment variable is blank | VS Code or PowerShell was open when `SetEnv.ps1` ran | Close all VS Code and terminal windows, reopen them, and check again |
 | A Cosmos DB operation returns `403 Forbidden` | Data-plane RBAC is missing or still propagating | Run `1B_Account_Access.ps1`, wait up to three minutes, and retry |
-| A Cosmos DB or Foundry call returns `401 Unauthorized` | The Azure CLI token expired | Run `az login` again and restart the lab process |
+| A Cosmos DB or Foundry call returns `401 Unauthorized` | The Azure CLI token expired | Run `az login --use-device-code` again and restart the lab process |
 | Foundry returns `DeploymentNotFound` | The local model deployment names are stale | Run `SetEnv.ps1`, restart VS Code, and retry |
 | A Python notebook cannot find a package | The wrong Python kernel is selected | Select the workshop Python interpreter and rerun the install cell |
 | Lab 4B cannot access a workspace | Fabric was omitted or the workspace assignment is incomplete | Ask the trainer to verify the shared capacity and your workspace role |
@@ -181,7 +184,7 @@ No Cosmos DB or Foundry account key is required.
 
 For most setup issues, use this recovery order:
 
-1. Run `az login`.
+1. Run `az login --use-device-code`.
 2. Run `SetEnv.ps1` from the repository root.
 3. Restart PowerShell and VS Code.
 4. Run `1B_Account_Access.ps1` again.
